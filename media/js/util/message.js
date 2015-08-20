@@ -93,6 +93,9 @@ if (typeof exports !== 'undefined') {
         if (imagePattern.test(text)) {
             return text.replace(imagePattern, function(url) {
                 var uri = encodeEntities(_.unescape(url));
+                //baseUrlを除去して相対パスにする
+                uri = text.replace(getBaseUrl(), '');
+                //console.log('Image:'+uri);
                 return '<a class="thumbnail" href="' + uri +
                        '" target="_blank"><img src="' + uri +
                        '" alt="Pasted Image" /></a>';
