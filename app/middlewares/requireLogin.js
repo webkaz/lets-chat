@@ -6,6 +6,8 @@
 
 var passport = require('passport');
 
+var settings = require('./../config');
+
 function getMiddleware(fail) {
     return function(req, res, next) {
         if (req.user) {
@@ -40,5 +42,6 @@ module.exports = getMiddleware(function(req, res) {
 });
 
 module.exports.redirect = getMiddleware(function(req, res) {
-    res.redirect('/login');
+    console.log('BaseUrl:'+settings.http.base);
+    res.redirect(settings.http.base + '/login');
 });
