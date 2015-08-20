@@ -1,3 +1,8 @@
+## 変更点
+
+* 固有の設定ファイルを追加
+* Windows上で実行する際の問題を修正(package.js)
+
 ![Let's Chat](http://i.imgur.com/0a3l5VF.png)
 
 ![Screenshot](http://i.imgur.com/C4uMD67.png)
